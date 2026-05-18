@@ -23,3 +23,22 @@ app.post('/webhook', line.middleware(lineConfig), async (req, res) => {
   res.json({ status: 'ok' });
   const events = req.body.events;
   for (const event of events) {
+    if (event.type === 'message' && event.message.type === 'text') {
+      try {
+        const result = await model.generateContent(
+          SYSTEM_PROMPT + '\n\nลูกค้าถามว่า: ' + event.message.text
+        );
+        const reply = result.response.text();
+        await lineClient.replyMessage({
+          replyToken: event.replyToken,
+          messages: [{ type: 'text', text: reply }]
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
