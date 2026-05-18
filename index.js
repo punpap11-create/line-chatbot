@@ -14,7 +14,7 @@ const lineClient = new line.messagingApi.MessagingApiClient({
 });
 
 const genAI = new GoogleGenerativeAI('AIzaSyAEPiHTNPzLnyBLxXO8z0La5tBYL9h5Uq8');
-const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
 const SYSTEM_PROMPT = `คุณคือ AI Assistant ผู้ช่วยของร้านค้า
 ตอบสั้นๆ กระชับ เป็นมิตร ใช้ภาษาไทย`;
