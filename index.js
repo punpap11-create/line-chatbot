@@ -13,7 +13,7 @@ const lineClient = new line.messagingApi.MessagingApiClient({
   channelAccessToken: lineConfig.channelAccessToken
 });
 
-const genAI = new GoogleGenerativeAI('AIzaSyAEPiHTNPzLnyBLxXO8z0La5tBYL9h5Uq8');
+const genAI = new GoogleGenerativeAI('AIzaSyB4OT7cWrxeIzUcdnowcfU7b_bcqfTBT5M');
 const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
 const SYSTEM_PROMPT = `คุณคือ AI Assistant ผู้ช่วยของร้านค้า
