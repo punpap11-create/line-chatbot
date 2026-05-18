@@ -5,8 +5,8 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 const app = express();
 
 const lineConfig = {
-  channelSecret: 'b98a790d8d4a1fea981330f8d5820ffb',
-  channelAccessToken: 'nEHbsMwELyhdwS8NwpnfX9lyMoyJR9AdtPyq42j0E7/TfMX6IDqfdQV6krtIaBpEs+PXlByXNU7AHcF0fCcBW5cAkag0Xw0Ej8eBVhtaKkof/Ci2ntvfqG5IBr3w3C/H/ybNFALgJytS8TTQe9+evAdB04t89/1O/w1cDnyilFU='
+  channelSecret: '2303e733c7b5b09c332ffc227c955c1d',
+  channelAccessToken: '+JZavrFP57TCjFgIlhqa5L3FT6oUAED9R9W1XVt5JrHn4FV+IWnAvWTX25WyiNKPyMhFQpiwwNdsf9tjhyrQscniJ5+M2FS2itrnjr3tIatRalhEWn+wJ7+L6bgx1pckrlJiI+lpxx1y2Rhw6irpwQdB04t89/1O/w1cDnyilFU='
 };
 
 const lineClient = new line.messagingApi.MessagingApiClient({
